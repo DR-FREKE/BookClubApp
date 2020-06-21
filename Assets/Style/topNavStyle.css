@@ -1,0 +1,390 @@
+.banner {
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+  height: 100px;
+  position: fixed;
+  top: 0px;
+  left: 0px;
+  right: 0px;
+  background: #ffffff;
+  /* opacity: 0.97; */
+  border: 1px solid #eeeeee;
+  box-shadow: 0px 0px 40px rgba(0, 0, 0, 0.05);
+  z-index: 2;
+}
+.banner > .match-search {
+  grid-column: 4/10;
+  width: 100%;
+  display: block;
+  justify-content: center;
+}
+.match-search .match-container {
+  width: 37.3%;
+  position: fixed;
+  padding: 0 2em;
+  margin-left: 4.8em;
+  margin-top: 4.29em;
+  background: #ffffff;
+  border: 1px solid #eeeeee;
+}
+.banner > .mini {
+  grid-column: 1/13;
+  display: none;
+  /* display: grid; */
+  grid-template-columns: repeat(12, 1fr);
+}
+.mini > .back-arrow {
+  grid-column: 1/4;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.mini > .back-arrow > .arrow-icon {
+}
+.mini > .mini-search {
+  grid-column: 4/13;
+  display: flex;
+  align-items: center;
+}
+.mini-search > .mini-input {
+  width: 100%;
+  padding-right: 2em;
+}
+.mini-input .mini-searchBox {
+  display: -ms-flexbox; /*internet explorer*/
+  display: flex;
+  background: transparent;
+  width: 100%;
+  border: 1px solid #dddddd;
+}
+.mini-searchBox input {
+  width: 100%;
+  padding: 0.4em 1.5em;
+  background: none;
+  border: none;
+}
+.mini-searchBox > input::placeholder {
+  font-size: 14px;
+  /* font-family: Ubuntu; */
+  font-style: normal;
+  font-weight: normal;
+  color: #999999;
+}
+.mini-searchBox > .icon {
+  padding: 0;
+  background: #f9f9fb;
+  color: #000;
+  border-left: 1px solid #dddddd;
+}
+.mini-searchBox > .icon > button {
+  cursor: pointer;
+  display: -ms-flexbox;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 11px;
+  background: none;
+  outline: 0;
+  border: none;
+  min-width: 40px;
+  text-align: center;
+}
+button:focus {
+  outline: none;
+}
+button::-moz-focus-inner {
+  border: 0;
+}
+.banner > nav {
+  grid-column: 1/13;
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+  grid-auto-rows: minmax(100px, auto);
+}
+nav > .humbarger {
+  display: none;
+  grid-column: 1/2;
+  justify-content: center;
+  align-self: center;
+}
+.humbarger > .totalBar {
+  width: auto;
+  cursor: pointer;
+  display: block;
+  padding: 0 2em;
+}
+.humbarger > .totalBar:focus {
+}
+.totalBar > .bar1 {
+  width: 10.21px;
+  height: 1.75px;
+  background-color: black;
+  margin: 6px 0;
+}
+.totalBar > .bar2 {
+  width: 16px;
+  height: 1.75px;
+  background-color: black;
+  margin: 6px 0;
+}
+.totalBar > .bar3 {
+  width: 10.21px;
+  height: 1.75px;
+  background-color: black;
+  margin: 6px 0;
+}
+.totalBar:focus {
+  outline: none;
+  background: none;
+}
+nav > .brand {
+  grid-column: 1/4;
+  padding: 0 35px;
+  align-self: center;
+}
+.brand > .brand-details {
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+}
+.brand-details > .brand-logo {
+  grid-column: 1/3;
+  align-self: center;
+}
+.brand-logo > .logo {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 50px;
+  width: 50px;
+  text-align: center;
+  border-radius: 50%;
+  background: #000;
+  color: #fff;
+}
+.brand-details > .brand-info {
+  display: flex;
+  grid-column: 4/13;
+  list-style: none;
+  justify-content: start;
+  align-items: end;
+}
+.brand-info > ul {
+  padding: 0;
+  margin: 0;
+}
+.brand-info > ul > li {
+  display: inline-block;
+  width: 100%;
+}
+.brand-info > ul > li:nth-child(odd) > span {
+  /* font-family: Ubuntu; */
+  font-style: normal;
+  font-weight: normal;
+  font-size: 18px;
+  line-height: 21px;
+
+  /* identical to box height */
+  display: flex;
+  align-items: flex-end;
+
+  color: #000000;
+}
+.brand-info > ul > li:nth-child(even) > span {
+  font-style: normal;
+  font-weight: normal;
+  font-size: 12px;
+  line-height: 14px;
+
+  /* identical to box height */
+  display: flex;
+  align-items: flex-end;
+
+  color: #aaaaaa;
+}
+nav > .searchBar-div {
+  grid-column: 4/10;
+  padding: 0 40px;
+  align-self: center;
+}
+.searchBar-div .search {
+  padding: 0 3.3em 0 2.3em;
+}
+.search > .searchBox {
+  display: -ms-flexbox; /*internet explorer*/
+  display: flex;
+  background: transparent;
+  width: 100%;
+  border: 1px solid #dddddd;
+}
+.searchBox > input {
+  width: 100%;
+  padding: 0.4em 1.5em;
+  background: none;
+  border: none;
+}
+.searchBox > input::placeholder {
+  font-size: 14px;
+  /* font-family: Ubuntu; */
+  font-style: normal;
+  font-weight: normal;
+  color: #999999;
+}
+.searchBox > .icon {
+  padding: 0;
+  background: #f9f9fb;
+  color: #000;
+  border-left: 1px solid #dddddd;
+}
+.searchBox > .icon > button {
+  cursor: pointer;
+  display: -ms-flexbox;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 11px;
+  background: none;
+  outline: 0;
+  border: none;
+  min-width: 40px;
+  text-align: center;
+}
+button:focus {
+  outline: none;
+}
+button::-moz-focus-inner {
+  border: 0;
+}
+
+nav > .right-nav {
+  grid-column: 10/13;
+  padding: 0 2em;
+  align-self: center;
+}
+.right-nav > .nav-list {
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+}
+.nav-list .group {
+  display: flex;
+  grid-column: 6/11;
+  list-style: none;
+  padding: 0.8em 0.5em;
+  margin: 0;
+}
+ul.group > li {
+  display: flex;
+  height: 100%;
+  line-height: 100%;
+  text-align: center;
+  width: 100%;
+}
+li.notification-bell .badge {
+  border-radius: 50%;
+  width: 20px;
+  height: 20px;
+  font-size: 12px;
+  background: #65c100;
+  border: 2px solid #65c100;
+  color: #fff;
+  text-align: center;
+  margin-top: -6px;
+  margin-left: -6px;
+}
+.nav-list .profile {
+  grid-column: 11/13;
+}
+.profile .avatar {
+  float: right;
+  height: 50px;
+  width: 50px;
+  text-align: center;
+  border-radius: 50%;
+}
+.avatar > img {
+  height: 50px;
+  width: 50px;
+  border-radius: 50%;
+  background: #ffffff;
+  border: 1px solid #ffffff;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+nav > div {
+}
+nav > div:nth-child(odd) {
+}
+
+/* start media query for mobile device */
+@media only screen and (max-width: 760px),
+  (min-device-width: 768px) and (max-device-width: 1024px) {
+  .banner {
+    height: 70px;
+  }
+  .banner > .match-search {
+    grid-column: 1/13;
+  }
+  .banner > nav {
+    grid-column: 1/13;
+    grid-template-columns: repeat(12, 1fr);
+    grid-auto-rows: minmax(70px, 70px);
+    /* background: green; */
+  }
+  nav > .humbarger {
+    display: block;
+  }
+  nav > .brand {
+    grid-column: 2/3;
+  }
+  nav > .searchBar-div {
+    grid-column: 3/6;
+    padding: 0;
+    display: flex;
+    justify-self: end;
+  }
+  nav > .right-nav {
+    grid-column: 7/13;
+    padding: 0;
+  }
+  .brand-details > .brand-logo {
+    grid-column: 1/13;
+  }
+  .brand-logo > .logo {
+    height: 40px;
+    width: 40px;
+  }
+  .brand-details > .brand-info {
+    display: none;
+  }
+  .banner > .match-search {
+    display: none;
+  }
+  .searchBar-div .search {
+    padding: 0;
+  }
+  .search > .searchBox {
+    width: auto;
+    justify-content: end;
+    border: none;
+  }
+  .searchBox > input {
+    display: none;
+  }
+  .searchBox > .icon {
+    background: none;
+    border: none;
+  }
+  .nav-list .group {
+    grid-column: 1/7;
+    padding: 0.8em 0;
+  }
+  .nav-list .profile {
+    grid-column: 7/13;
+  }
+  .profile .avatar {
+    float: left;
+  }
+  .avatar > img {
+    height: 40px;
+    width: 40px;
+  }
+}

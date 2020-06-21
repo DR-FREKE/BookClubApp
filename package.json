@@ -1,0 +1,11 @@
+{
+  "name": "bookclubapp",
+  "version": "1.0.0",
+  "description": "Book Club App, a project like no other",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Solomon Ndifereke",
+  "license": "ISC"
+}

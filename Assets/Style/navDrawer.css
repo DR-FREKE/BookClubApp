@@ -1,0 +1,207 @@
+/* start the side bar design */
+#mSidenav {
+  width: 350px;
+  height: 100vh;
+  position: fixed;
+  z-index: 1;
+  top: 100px;
+  left: 0;
+}
+.nav-drawer {
+  width: 350px;
+  height: 100vh;
+  position: fixed;
+  background: #ffffff;
+  box-shadow: -10px 0px 40px rgba(0, 0, 0, 0.1);
+}
+.nav-drawer:hover {
+  overflow: auto;
+}
+.nav-drawer-header {
+  display: none;
+  flex-direction: column;
+}
+
+/* arrow styling */
+.nav-drawer-header > .back-arrow {
+  padding: 1em;
+  display: flex;
+}
+.back-arrow > .arrow-icon {
+  cursor: pointer;
+  padding: 1em 1.5em;
+}
+
+/* nav brand styling */
+.nav-drawer-header > .navBrand {
+  display: flex;
+  padding: 0 2.5em 1em;
+}
+.navBrand > .brand-details {
+  display: flex;
+}
+.navBrand > .brand-details > .brand-info {
+  padding-left: 1em;
+  margin: auto;
+}
+.navBrand .brand-logo > .logo {
+  height: 50px;
+  width: 50px;
+}
+
+.mSidebar {
+  top: 0.76%;
+  bottom: 67.74%;
+}
+.mSidebar .section {
+  border-bottom: 1px solid #eeeeee;
+}
+.section > ul {
+  list-style: none;
+}
+.user-section > ul {
+  top: 0.76%;
+  bottom: 94.96%;
+}
+.user-section > ul > li {
+  font-weight: 500;
+  padding: 0.5em 0;
+}
+.user-section > ul > li.active a {
+  color: #65c100;
+}
+
+/* eplore section */
+.explore-section > ul {
+  top: 6.51%;
+  bottom: 86.37%;
+}
+.books-section > ul {
+  top: 25.13%;
+  bottom: 67.74%;
+}
+.section > ul > li.list-header {
+  font-style: normal;
+  font-weight: bold;
+  font-size: 15px;
+  line-height: 16px;
+  display: flex;
+  align-items: flex-end;
+  color: #000000;
+  padding: 1.4em 0;
+}
+.section > ul > li {
+  font-style: normal;
+  font-weight: normal;
+  font-size: 14px;
+  line-height: 16px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  color: #000000;
+  padding: 0.5em 0;
+  padding-right: 2em;
+}
+.section > ul > li a:hover {
+  color: #65c100;
+  transition: 0.2s ease-in;
+}
+
+li.notify .badge {
+  background-color: #65c100;
+  color: #fff;
+  font-weight: bold;
+  font-size: 80%;
+  border-radius: 0.8em;
+  min-width: 2em;
+  padding: 0.15em;
+  text-align: center;
+}
+.section:not(:first-child) > ul > li > span {
+  font-style: normal;
+  font-weight: normal;
+  font-size: 12px;
+  line-height: 12px;
+  display: flex;
+  align-items: center;
+  text-align: right;
+  color: #aaaaaa;
+}
+
+/* start media query for mobile device */
+@media only screen and (max-width: 760px),
+  (min-device-width: 768px) and (max-device-width: 1024px) {
+  /* handle sidebar for mobile device */
+  .nav-drawer-header {
+    display: flex;
+  }
+  .mNav {
+    display: none;
+  }
+  .nav-drawer {
+    background: #f9f9fb;
+    width: 350px;
+  }
+  .navBrand .brand-details > .brand-info {
+    display: block;
+  }
+  #mSidenav {
+    height: 100vh;
+    width: 100vw;
+    top: 0;
+    left: 0;
+    background: transparent;
+  }
+  #myNavbar.res {
+    height: 100%;
+    width: 350px;
+    position: fixed;
+    z-index: 2;
+    top: 0;
+    left: 0;
+    background: transparent;
+    /* overflow-y: auto; */
+    animation: slide-out 0.5s ease;
+    -webkit-animation: slide-out 0.5s ease;
+    -moz-animation: slide-out 0.5s ease;
+    -o-animation: slide-out 0.5s ease;
+    -ms-animation: slide-out 0.5s ease;
+  }
+  #myNavbar.slideIn {
+    height: 0%;
+    width: 0%;
+    top: 0;
+    left: 0;
+    z-index: 2;
+    position: fixed;
+    animation: slide-in 0.5s ease;
+    -webkit-animation: slide-in 0.5s ease;
+    -moz-animation: slide-in 0.5s ease;
+    -o-animation: slide-in 0.5s ease;
+    -ms-animation: slide-in 0.5s ease;
+    animation-fill-mode: forwards;
+    -webkit-animation-fill-mode: forwards;
+    -moz-animation-fill-mode: forwards;
+    -o-animation-fill-mode: forwards;
+    -ms-animation-fill-mode: forwards;
+  }
+  @keyframes slide-out {
+    from {
+      transform: translateX(-100vw);
+    }
+    to {
+      transform: translateX(0);
+    }
+  }
+  @keyframes slide-in {
+    from {
+      transform: translateX(0);
+    }
+    to {
+      transform: translateX(-100vw);
+    }
+  }
+  .mSidebar {
+    /* margin-top: 5em; */
+  }
+}
